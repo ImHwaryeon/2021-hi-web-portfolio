@@ -304,6 +304,7 @@ span.blue {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .skills-wrapper .img-wrap {
@@ -462,6 +463,10 @@ span.blue {
 
 	.skills-wrapper .skills {
 		display: flex;
+	}
+
+	.skills-wrapper .img-wrapper{
+		justify-content: flex-start;
 	}
 
 	.skills-wrapper .img-wrap {

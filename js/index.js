@@ -1,5 +1,9 @@
 /********* 전역선언 **********/
 var scTop, navi = {};
+var typingInterval = null;
+var typing = ['개발자', '프론트엔드 개발자', '백엔드 개발자', '웹 퍼블리셔'];
+var typingIdx = 0;
+var $span = $('.typing')
 
 /********* 사용자함수 **********/
 var swiper = new Swiper('.swiper-container', {
@@ -21,6 +25,8 @@ var swiper = new Swiper('.swiper-container', {
 	},
 });
 
+typingInterval = setInterval(onInterval, 150);
+
 
 /********* 이벤트선언 **********/
 $(window).scroll(onScroll); // scroll spy
@@ -37,6 +43,24 @@ function onScroll (e) {
 	else {
 		$(".navi-wrapper").removeClass('active');
 	}
+}
+
+function onInterval() {
+	var spanLen = $span.text().length;
+	var typingLen = typing[typingIdx].length
+
+	if(spanLen == typingLen) {
+		clearInterval(typingInterval);
+		setTimeout(function(){
+			$span.text('');
+			typingIdx = typingIdx == typing.length - 1 ? 0 : typingIdx + 1;
+			typingInterval = setInterval(onInterval, 150);
+		}, 2000)
+	}
+	else {
+		$span.text( typing[typingIdx].substr(0, spanLen + 1) )
+	}
+	console.log(typing[0].length);
 }
 
 
