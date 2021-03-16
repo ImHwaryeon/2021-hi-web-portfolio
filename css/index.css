@@ -158,6 +158,7 @@ span.blue {
 
 .header-wrapper ul.mo-wrap {
 	position: absolute;
+	z-index: 99;
 	right: 0;
 	top: 0;
 	margin-left: auto;
@@ -231,31 +232,26 @@ span.blue {
 	z-index: 999;
 	background-color: #fff;
 	opacity: 0.8;
-	height: 89px;
 	position: fixed;
-	display: flex;
 	top: -90px;
 	left: 0;
-	transition: all 1s;
+	transition: all 0.33s;
 }
+
+.navi-wrapper > .wrapper {display: flex; align-items: center; height: 89px; padding: 0 5%;}
 
 .navi-wrapper.active {
 	top: 0;
 }
 
-.navi-wrapper>.img-wrap {
-	padding: 2em 15em;
-}
 
 .navi-wrapper ul.navi-wrap {
 	display: flex;
 	margin-left: auto;
-	margin-right: 10em;
 	font-family: 'Ubuntu', sans-serif;
 	font-weight: bold;
 	font-size: 1.5em;
 	letter-spacing: -0.025em;
-	padding-top: 2em;
 	color: #333;
 }
 
@@ -308,6 +304,7 @@ span.blue {
 	margin-right: 2em;
 	margin-bottom: 2em;
 	width: 24%;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.8)
 }
 
 /************ .about-wrapper *************/
@@ -448,6 +445,7 @@ span.blue {
 	color: #f3f3f3;
 	text-align: center;
 	user-select: none;
+	padding: 3em 0;
 }
 
 .footer-wrapper h2.ft {
@@ -563,7 +561,7 @@ line-height: 1.5em;
 	}
 
 	.footer-wrapper {
-		padding: 0 1em;
+		padding: 2em 1em;
 	}
 	.footer-wrapper .f-right>span.address {
 		display: none;
@@ -590,7 +588,6 @@ line-height: 1.5em;
 		margin-right: 10em;
 		font-size: 1.3em;
 		letter-spacing: -0.025em;
-		padding-top: 2em;
 		/* 위치 가운데로 모이기*/
 	}
 
@@ -641,6 +638,18 @@ line-height: 1.5em;
 	.works-wrapper .site-wrap-reac{
 		height: 50%;
 	}
+
+	.works-wrapper .swiper-container {
+		margin-bottom: 0;
+	}
+
+	.works-wrapper .swiper-button-next {
+		right: 1em;
+	}
+
+	.works-wrapper .swiper-button-prev {
+		left: 1em;
+	}
 }
 
 @media screen and (max-width: 575px) {
@@ -676,6 +685,7 @@ line-height: 1.5em;
 	.about-wrapper li.about {
 		width: 100%;
 	}
+
 
 	.footer-wrapper .f-left {
 		text-align: left;

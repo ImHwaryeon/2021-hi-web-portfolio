@@ -33,11 +33,20 @@ $(window).scroll(onScroll); // scroll spy
 
 
 /********* 이벤트콜백 **********/
+function onNavi(n) {
+	var tar = [];
+	$(".pages").each(function(v) {
+		tar.push($(this).offset().top);
+	});
+	$("html, body").stop().animate({"scrollTop": tar[n]+"px"}, 500);
+}
+
+
 function onScroll (e) {
 	var scTop = $(this).scrollTop();
 	var skillsTop = $(".skills-wrapper").offset().top;
-	console.log(skillsTop, scTop);
-	if(scTop >= skillsTop) {
+	// console.log(skillsTop, scTop);
+	if(scTop + 100 >= skillsTop) {
 		$(".navi-wrapper").addClass('active');
 	}
 	else {
@@ -60,7 +69,7 @@ function onInterval() {
 	else {
 		$span.text( typing[typingIdx].substr(0, spanLen + 1) )
 	}
-	console.log(typing[0].length);
+	// console.log(typing[0].length);
 }
 
 
