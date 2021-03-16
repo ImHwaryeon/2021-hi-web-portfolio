@@ -8,7 +8,7 @@ var $span = $('.typing')
 /********* 사용자함수 **********/
 var swiper = new Swiper('.swiper-container', {
 	slidesPerView: 1,
-	spaceBetween: 30,
+	spaceBetween: 20,
 	loop: true,
 	centeredSlides: true,
 	autoplay: {
@@ -68,5 +68,3 @@ $('.header-wrapper .sub-wrap').click(function(){
 	$('.header-wrapper').toggleClass('active');
 })
 
-
-new WOW().init();
