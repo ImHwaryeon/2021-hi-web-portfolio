@@ -11,6 +11,7 @@ var swiper = new Swiper('.swiper-container', {
 	spaceBetween: 20,
 	loop: true,
 	centeredSlides: true,
+	allowTouchMove:false, //터치슬라이딩 기능 막음
 	autoplay: {
 		delay: 3000,
 		disableOnInteraction: false,
