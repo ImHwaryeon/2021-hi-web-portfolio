@@ -376,7 +376,6 @@ span.blue {
 .works-wrapper {
 	width: 100%;
 	position: relative;
-	user-select: none;
 }
 
 .works-wrapper .title-main {
