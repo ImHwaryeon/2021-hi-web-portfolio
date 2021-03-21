@@ -399,6 +399,7 @@ span.blue {
 	height: 100%;
 	width: 50%;
 	margin: auto;
+	z-index: 999;
 }
 .works-wrapper .site-wrap-reac{
 	display: none;
