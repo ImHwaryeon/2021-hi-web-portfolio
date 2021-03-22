@@ -7,19 +7,28 @@ var $span = $('.typing')
 
 /********* 사용자함수 **********/
 var swiper = new Swiper('.swiper-container', {
-	slidesPerView: 1,
-	spaceBetween: 20,
-	loop: true,
+	slidesPerView: 1, //한 슬라이드에 보여줄 갯수
+	spaceBetween: 20, //슬라이드 사이 여백
+	loop: true, //슬라이드 반복 여부
 	centeredSlides: true,
 	allowTouchMove:false, //터치슬라이딩 기능 막음
-	autoplay: {
-		delay: 3000,
-		disableOnInteraction: false,
+	autoplay: { //자동 슬라이드 설정, 비 활성화 시 false
+		delay: 3000, //시간 설정
+		disableOnInteraction: false, //false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
 	},
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
 	},
+	
+});
+
+$(".swiper-container").mouseenter(function(){
+	swiper.autoplay.stop();
+});
+
+$(".swiper-container").mouseleave(function(){
+	swiper.autopaly.start();
 });
 
 typingInterval = setInterval(onInterval, 150);
