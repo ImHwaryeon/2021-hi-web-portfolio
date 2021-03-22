@@ -22,6 +22,14 @@ var swiper = new Swiper('.swiper-container', {
 	},
 });
 
+$(".swiper-container").mouseenter(function(){
+	swiper.autoplay.stop();
+});
+
+$(".swiper-container").mouseleave(function(){
+	swiper.autopaly.start();
+});
+
 typingInterval = setInterval(onInterval, 150);
 
 
