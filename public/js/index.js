@@ -31,6 +31,14 @@ $(".swiper-container").mouseleave(function(){
 	swiper.autopaly.start();
 });
 
+$(".swiper-container").mouseenter(function(){
+	swiper.autoplay.stop();
+});
+
+$(".swiper-container").mouseleave(function(){
+	swiper.autopaly.start();
+});
+
 typingInterval = setInterval(onInterval, 150);
 
 
